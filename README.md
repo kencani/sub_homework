@@ -19,7 +19,7 @@
 测试方法 ： create_claim_error_by_already_exist
 
 
-![image](/create_claim_error_by_already_exist.png)
+![image](shortcut/create_claim_error_by_already_exist.png)
 
 
 
@@ -28,7 +28,7 @@
 测试方法 ： trans_claim_should_works
 
 
-![image](/trans_claim_should_works.png)
+![image](shortcut/trans_claim_should_works.png)
 
 
 ###### trans_claim_error_by_not_exist
@@ -36,7 +36,7 @@
 测试方法 ： trans_claim_error_by_not_exist
 
 
-![image](/trans_claim_error_by_not_exist.png)
+![image](shortcut/trans_claim_error_by_not_exist.png)
 
 
 
@@ -45,7 +45,7 @@
 测试方法 ： trans_claim_error_by_not_claim_owner
 
 
-![image](/trans_claim_error_by_not_claim_owner.png)
+![image](shortcut/trans_claim_error_by_not_claim_owner.png)
 
 
 
@@ -56,7 +56,7 @@
 测试方法 ： revoked_claim_should_works
 
 
-![image](/revoked_claim_should_works.png)
+![image](shortcut/revoked_claim_should_works.png)
 
 
 
@@ -67,7 +67,7 @@
 测试方法 ： revoked_claim_error_by_not_exist
 
 
-![image](/revoked_claim_error_by_not_exist.png)
+![image](shortcut/revoked_claim_error_by_not_exist.png)
 
 
 
@@ -77,7 +77,7 @@
 测试方法 ： revoked_claim_error_by_norevoked_claim_error_by_not_claim_ownert_exist
 
 
-![image](/revoked_claim_error_by_not_claim_owner.png)
+![image](shortcut/revoked_claim_error_by_not_claim_owner.png)
 
 
 
@@ -97,4 +97,4 @@
 测试方法 ： create_claim_error_by_claim_over_length
 
 
-![image](/create_claim_error_by_claim_over_length.png)
+![image](shortcut/create_claim_error_by_claim_over_length.png)
