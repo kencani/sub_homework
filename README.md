@@ -9,7 +9,7 @@
 测试方法 ： create_claim_should_works
 
 
-![image](/create_claim_should_works.png)
+![image](shortcut/create_claim_should_works.png)
 
 
 
