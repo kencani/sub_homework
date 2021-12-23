@@ -95,7 +95,7 @@ pub mod pallet {
 		pub fn create_claim(origin: OriginFor<T>, claim: Vec<u8>) -> DispatchResultWithPostInfo {
 			let max_length = T::Length::get();
 
-			ensure!(claim.len() as u32 <= max_length , Error::<T>::ClaimOverLength);
+			ensure!(claim.len()  <= max_length as usize , Error::<T>::ClaimOverLength);
 
 			let who = ensure_signed(origin)?;
 			//check proofs if it's exist.
