@@ -63,9 +63,6 @@ pub mod pallet {
 		/// Because this pallet emits events, it depends on the runtime's definition of an event.
 		type Event: From<Event<Self>> + IsType<<Self as frame_system::Config>::Event>;
 
-		/// The Currency handler for the Kitties pallet.
-		type Currency: ReservableCurrency<Self::AccountId>;
-
 		/// The type of Randomness we want to specify for this pallet.
 		type KittyRandomness: Randomness<Self::Hash, Self::BlockNumber>;
 
@@ -77,7 +74,10 @@ pub mod pallet {
 		/// 作业 2
 		type KittyIndex: Parameter + Member + AtLeast32BitUnsigned + Default + Copy + HasCompact;
 
-		/// The basic amount of funds that must be reserved for an kitty.
+		/// 作业 4
+		type Currency: ReservableCurrency<Self::AccountId>;
+
+		/// 作业 4
 		#[pallet::constant]
 		type Pledge: Get<BalanceOf<Self>>;
 	}
