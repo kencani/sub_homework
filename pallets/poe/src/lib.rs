@@ -2,8 +2,9 @@
 
 /// Homeworks of lesson one
 /// <https://docs.substrate.io/v3/runtime/frame>
+///
 pub use pallet::*;
-
+use sp_std::prelude::*;
 
 #[cfg(test)]
 mod mock;
@@ -15,7 +16,7 @@ mod tests;
 pub mod pallet {
 	use frame_support::{dispatch::DispatchResult, pallet_prelude::*, ensure};
 	use frame_system::pallet_prelude::*;
-
+	use sp_std::prelude::*;
 	/// Configure the pallet by specifying the parameters and types on which it depends.
 	#[pallet::config]
 	pub trait Config: frame_system::Config {
@@ -118,7 +119,7 @@ pub mod pallet {
 
 			//check proofs if it's exist.
 			let (owner,_) = Proofs::<T>::get(&claim).ok_or(Error::<T>::ClaimNotExist)?;
-	
+
 			//check owner
 			ensure!(who == owner,Error::<T>::NotClaimOwner);
 
@@ -138,7 +139,7 @@ pub mod pallet {
 
 			//check proofs if it's exist.
 			let (owner,_) = Proofs::<T>::get(&claim).ok_or(Error::<T>::ClaimNotExist)?;
-	
+
 			//check owner
 			ensure!(who == owner,Error::<T>::NotClaimOwner);
 
@@ -148,6 +149,6 @@ pub mod pallet {
 			Ok(().into())
 		}
 
-		
+
 	}
 }
