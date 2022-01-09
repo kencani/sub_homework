@@ -46,6 +46,8 @@ pub use pallet_template;
 /// Import the poe pallet.
 pub use pallet_poe;
 
+pub use pallet_kitties;
+
 /// An index to a block.
 pub type BlockNumber = u32;
 
@@ -293,6 +295,23 @@ impl pallet_poe::Config for Runtime {
 	type Length = MaxLength;
 }
 
+parameter_types! {
+	// One can owned at most 9,999 Kitties
+	pub const MaxKittyOwned: u32 = 9999;
+	pub const Pledge: u64 = 5000;
+	
+}
+
+
+impl pallet_kitties::Config for Runtime {
+	type Event = Event;
+	type Currency = Balances;
+	type KittyRandomness = RandomnessCollectiveFlip;
+	type KittyIndex = u64;
+	type Pledge = Pledge;
+	type MaxKittyOwned = MaxKittyOwned;
+}
+
 // Create the runtime by composing the FRAME pallets that were previously configured.
 construct_runtime!(
 	pub enum Runtime where
@@ -311,6 +330,7 @@ construct_runtime!(
 		// Include the custom logic from the pallet-template in the runtime.
 		TemplateModule: pallet_template,
 		PoeModule: pallet_poe,
+		KittiesModule:pallet_kitties,
 	}
 );
 

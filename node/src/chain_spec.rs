@@ -150,6 +150,8 @@ fn testnet_genesis(
 			// Assign network admin rights.
 			key: root_key,
 		},
+		
 		transaction_payment: Default::default(),
+		kitties_module: Default::default(),
 	}
 }
